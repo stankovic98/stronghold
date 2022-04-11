@@ -1,0 +1,1 @@
+<template>Mass View</template>
