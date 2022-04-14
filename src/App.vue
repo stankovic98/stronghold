@@ -8,6 +8,10 @@ import Navbar from "./components/Navbar.vue";
   <RouterView />
 </template>
 
+<script lang="ts">
+// TODO hide navbar if on home
+</script>
+
 <style>
 @import "@/assets/base.css";
 </style>

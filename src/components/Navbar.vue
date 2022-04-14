@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { RouterLink, RouterView } from "vue-router";
+import { RouterLink } from "vue-router";
 </script>
 
 <template>
@@ -9,6 +9,7 @@ import { RouterLink, RouterView } from "vue-router";
       <RouterLink class="link" to="/">Home</RouterLink>
       <RouterLink class="link" to="/mass">Mass</RouterLink>
       <RouterLink class="link" to="/catechism">Catechism</RouterLink>
+      <RouterLink class="link" to="/Lecutres">Lectures</RouterLink>
       <RouterLink class="link" to="/songs">Chants and Songs</RouterLink>
     </nav>
   </header>
@@ -17,11 +18,10 @@ import { RouterLink, RouterView } from "vue-router";
 <style scoped>
 nav {
   display: grid;
-  grid-template-columns: repeat(9, 1fr);
+  grid-template-columns: minmax(300px, 1fr);
+  grid-auto-flow: column;
 }
-p {
-  grid-column: span 5;
-}
+
 .link {
   border: 2px solid lightcoral;
   border-radius: 7px;

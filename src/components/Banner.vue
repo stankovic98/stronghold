@@ -1,3 +1,6 @@
+<script setup lang="ts">
+import { RouterLink } from "vue-router";
+</script>
 <template>
   <div class="banner">
     <img src="https://picsum.photos/800/600" alt="banner" />
@@ -8,10 +11,14 @@
         click what you want to learn:
       </h2>
       <div class="buttons">
-        <button>Sacred Mass</button>
-        <button>Catholic Faith</button>
-        <button>Watch Lessions from Youtube</button>
-        <button>Beautiful Chants and songs</button>
+        <RouterLink class="link" to="/mass">Sacred Mass</RouterLink>
+        <RouterLink class="link" to="/catechism">Catholic Faith</RouterLink>
+        <RouterLink class="link" to="/lectures"
+          >Watch Lectures from Youtube</RouterLink
+        >
+        <RouterLink class="link" to="/songs"
+          >Beautiful Chants and songs</RouterLink
+        >
       </div>
     </div>
   </div>
@@ -41,5 +48,13 @@ img {
   display: grid;
   justify-items: center;
   align-content: center;
+}
+
+.text > * {
+  background-color: rgba(127, 255, 212, 0.61);
+}
+.link {
+  padding: 10px 5px;
+  font-size: 1.5rem;
 }
 </style>
